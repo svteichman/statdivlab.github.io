@@ -1,1 +1,477 @@
-Hello World
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+<title>Home | Statistical Diversity Lab</title>
+<meta name="description" lang="en-us" content="At Statistical Diversity Lab, researcher Amy Willis lab develops rigorous statistical methods to analyze microbiome and biodiversity data." />
+<link rel="canon_test" href="index.html">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+<script src="javascripts/jquery-1.11.0.min.js?1391410894" type="text/javascript"></script> 
+<script src="javascripts/jquery.simplemodal.1.4.4.min.js?1387826925" type="text/javascript"></script> 
+<script src="javascripts/jquery-ui-1.10.3.custom.min.js?1388181381" type="text/javascript"></script> 
+
+
+<script type="text/javascript">
+  /*  patch added 9/18/2018 by scott
+   *  fix issue of link editing when ckeditor is opened in lightbox mode
+   *  https://bizango.teamwork.com/#/tasks/11559149
+   */
+  $.widget( "ui.dialog", $.ui.dialog, {
+   /*! jQuery UI - v1.10.2 - 2013-12-12
+    *  http://bugs.jqueryui.com/ticket/9087#comment:27 - bugfix
+    *  http://bugs.jqueryui.com/ticket/4727#comment:23 - bugfix
+    *  allowInteraction fix to accommodate windowed editors
+    */
+    _allowInteraction: function( event ) {
+      if ( this._super( event ) ) {
+        return true;
+      }
+
+      // address interaction issues with general iframes with the dialog
+      if ( event.target.ownerDocument != this.document[ 0 ] ) {
+        return true;
+      }
+
+      // address interaction issues with dialog window
+      if ( $( event.target ).closest( ".cke_dialog" ).length ) {
+        return true;
+      }
+
+      // address interaction issues with iframe based drop downs in IE
+      if ( $( event.target ).closest( ".cke" ).length ) {
+        return true;
+      }
+    },
+   /*! jQuery UI - v1.10.2 - 2013-10-28
+    *  http://dev.ckeditor.com/ticket/10269 - bugfix
+    *  moveToTop fix to accommodate windowed editors
+    */
+    _moveToTop: function ( event, silent ) {
+      if ( !event || !this.options.modal ) {
+        this._super( event, silent );
+      }
+    }
+  });
+</script>
+    
+
+    
+
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,600,700" rel="stylesheet">
+	<link href="stylesheets/blocks/defaults.css?1694197450" media="screen" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/sdi/site.css?1539372687" media="screen" rel="stylesheet" type="text/css" />
+
+	</head>
+<body id="body_home" class=" body_home ">
+
+	<div id="hero_frame" class="userBG tAr" >
+	<div class="page_frame group">
+		<a id="logo" href="index.html"></a>
+		
+
+		<div id="utility_nav">
+			<img src="images/sites/sdi/headeremail.png" class="this">
+			<a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+			<a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+			<a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+		</div>
+		<div id="nav_frame">
+					<div id="nav">
+			<ul class="nav">
+				<li><a id="nav_publications" rel="publications"  href="http://statisticaldiversitylab.com/publications">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="http://statisticaldiversitylab.com/team">team</a></li>
+				<li><a id="nav_software" rel="software"  href="http://statisticaldiversitylab.com/software">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="http://statisticaldiversitylab.com/teaching">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="http://statisticaldiversitylab.com/blog">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="http://statisticaldiversitylab.com/overview">research overview</a></li>
+			</ul>
+		</div>
+
+		<div id="mobile_nav">
+			<div class="icon">Menu &equiv;</div>
+			<ul class="nav">
+				<li><a id="nav_home" rel="home"  href="index.html">home</a></li>
+				<li><a id="nav_publications" rel="publications"  href="http://statisticaldiversitylab.com/publications">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="http://statisticaldiversitylab.com/team">team</a></li>
+				<li><a id="nav_software" rel="software"  href="http://statisticaldiversitylab.com/software">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="http://statisticaldiversitylab.com/teaching">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="http://statisticaldiversitylab.com/blog">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="http://statisticaldiversitylab.com/overview">research overview</a></li>
+			</ul>
+		</div>
+	
+			<div class="rule"></div>
+		</div>
+	</div>
+</div>
+
+		
+
+
+
+<div data-sortable="151418">
+
+
+	<div class="block_container " data-content-id="151510"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="151510" class="block block_id-151510 columns__3 block_type__3-column background-color__light-gray background-position__center">
+  <div class="block__bg-img"></div>
+	<div class="page_frame group">
+    
+<style>
+
+  
+  .block_id-151510 .block__bg-img {
+    background-image: url(https://s3.amazonaws.com/hoth.bizango/images/362914/geo-bg_feature.gif);
+  }
+  @media only screen and (min-width: 1300px){
+
+    .block_id-151510 .block__bg-img {
+      background-image: url(https://s3.amazonaws.com/hoth.bizango/images/362914/geo-bg.gif);
+    }
+  }
+  
+
+</style>
+
+<script defer="defer" src="javascripts/blocks/parallax.min.js?1495829387" type="text/javascript"></script>
+<script>  
+
+  $(document).ready(function(){  
+    $('.block_id-151510.parallax__yes').parallax({
+      imageSrc: "https://s3.amazonaws.com/hoth.bizango/images/362914/geo-bg_feature.gif"
+//       , bleed: 50
+// bring back bleed if jank becomes an issue
+    });
+    /* see http://pixelcog.github.io/parallax.js/ for other options */
+  });  
+
+</script>  
+
+    <div class="all-cols-wrap ">
+    
+      <div class="col-1 ">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151510_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151510", "label":"" ,  "tag":"div"}' >	
+		<h2>The statistical diversity lab develops rigorous statistical methods to analyze microbiome&nbsp;and biodiversity data.&nbsp;</h2>
+
+<p>&nbsp;</p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    
+      <div class="col-2 ">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_151510_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"151510", "label":"" ,  "tag":"div"}' >	
+		<p>We are a team of statisticians&nbsp;creating methods and software to advance our understanding of microbial ecosystems. Our work spans&nbsp;a wide variety of application areas in human and environmental health.&nbsp;</p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    
+      <div class="col-3 ">
+
+          <div class="element__image element-0 ">
+            
+
+
+
+
+          </div>
+          <div class="element__text element-1 ">
+            
+	<div class="bizango_cms bizango_cms_content bizango_content_rich2 textdiv_rich2" id="content_151510_rich2" data-bizango='{"monkey":"data", "field":"rich2", "object_type":"content", "cms_id":"151510", "label":"" ,  "tag":"div"}' >	
+		<p>We work on what we believe to be the most critical methodological needs in microbial science and the most serious shortcomings of existing analysis methods. Along with our research, we see outreach, education, and collaboration as a core part of this mission.</p>
+
+<p style="text-align: right;"><a class="button" href="http://statisticaldiversitylab.com/publications">publications</a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+
+          </div>
+
+      </div>
+
+    </div>  
+  </div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="151518"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="151518" class="block block_id-151518 block_type__3-col-special">
+	<div class="page_frame group">
+		<div class="col-1 fl">
+				<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151518_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151518", "label":"" ,  "tag":"div"}' >	
+		<p>statistical diversity lab</p>
+
+<h2>software</h2>
+
+<p><a class="button" href="http://sdi.bizangonet.com/software">all software</a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+		</div>
+		<div class="col-2 fl group">
+			
+
+
+				<a href="http://statisticaldiversitylab.com/manufacturers">
+					<img src="https://s3.amazonaws.com/hoth.bizango/images/418638/Screen_Shot_2018-05-25_at_5.28.12_PM_sidebar.png" class="illustration" >
+				</a>
+				<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_151518_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"151518", "label":"" ,  "tag":"div"}' >	
+		<p>Rigorous alpha and beta diversity analysis&nbsp;for microbiome studies</p>
+		
+	</div>
+	
+
+
+
+
+
+
+		</div>
+		<div class="col-3 fr group">
+			
+
+				<a href="http://statisticaldiversitylab.com/manufacturers">
+					<img src="https://s3.amazonaws.com/hoth.bizango/images/362935/breakaway_sidebar.png" class="illustration" >
+				</a>
+				<div class="bizango_cms bizango_cms_content bizango_content_rich2 textdiv_rich2" id="content_151518_rich2" data-bizango='{"monkey":"data", "field":"rich2", "object_type":"content", "cms_id":"151518", "label":"" ,  "tag":"div"}' >	
+		<p>The premier package for statistical analysis of microbial diversity.</p>
+		
+	</div>
+	
+
+
+
+
+
+
+		</div>  
+	</div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="151522"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="151522" class="block block_id-151522 block_type__2-col-circle-image background-color__light-gray">
+	<div class="page_frame group">
+		<div class="col-1 fl">
+				<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151522_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151522", "label":"" ,  "tag":"div"}' >	
+				
+	</div>
+	
+
+
+
+
+
+
+			
+
+				<div class="userBG circleimg" style="background-image:url('https://s3.amazonaws.com/hoth.bizango/images/362948/profile-pic_thumb.png')"></div>
+		</div>
+		<div class="col-2 fl group">
+				<div class="bizango_cms bizango_cms_content bizango_content_rich1 textdiv_rich1" id="content_151522_rich1" data-bizango='{"monkey":"data", "field":"rich1", "object_type":"content", "cms_id":"151522", "label":"" ,  "tag":"div"}' >	
+		<h1>Amy Willis, Ph.D.</h1>
+
+<p>Amy Willis (she/her) is the&nbsp;Principal Investigator of the&nbsp;Statistical Diversity Lab and an&nbsp;Associate Professor in the&nbsp;Department of&nbsp;Biostatistics at the&nbsp;University of&nbsp;Washington.&nbsp;Amy brings her expertise in&nbsp;statistical methods development,&nbsp;<span style="font-size: 14.15px; letter-spacing: 0.2px;">high dimensiona</span><span style="font-size: 14.15px; letter-spacing: 0.2px;">l data,&nbsp;</span>statistical machine learning,&nbsp;phylogenetics and&nbsp;<span style="font-size: 14.15px; letter-spacing: 0.2px;">computational biology</span>&nbsp;to&nbsp;develop tools&nbsp;for the analysis of microbiome and biodiversity data. Amy&nbsp;is passionate about&nbsp;reproducible science,&nbsp;meaningful&nbsp;data analysis,&nbsp;ecosystem and host health, and&nbsp;collaborating with scientists&nbsp;who share these values.&nbsp;</p>
+		
+	</div>
+	
+
+
+
+
+
+
+		</div>
+ 
+	</div>
+</div>
+	
+	</div>
+
+
+	<div class="block_container " data-content-id="151523"> 
+  <div class="block__bg-img block_container__bg-img" style="display:none;"></div>
+	
+	
+
+    <div id="151523" class="block block_id-151523 block_type__cta">
+	<div class="page_frame group">
+		<div class="thirteen-col center tAr">
+				<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151523_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151523", "label":"" ,  "tag":"div"}' >	
+		<p>MORE INFORMATION <a class="button" href="http://statisticaldiversitylab.com/overview#151547">for statisticians</a> <a class="button" href="http://statisticaldiversitylab.com/overview#151548">for biologists</a> <a class="button" href="http://statisticaldiversitylab.com/overview#151549">for the public</a></p>
+		
+	</div>
+	
+
+
+
+
+
+
+		</div> 
+	</div>
+</div>
+	
+	</div>
+
+
+</div>
+
+
+
+
+	
+  <div id="topfoot" class="userBG" style="background-image:url('https://s3.amazonaws.com/hoth.bizango/images/362955/footerbg_feature.jpg')">
+    <img src="images/sites/sdi/lucyintheskywith.png" class="dia">
+    <div class="page_frame group">
+      <a href="index.html" class="footlog"><img src="images/sites/sdi/logo.png"></a>
+      
+
+
+      <div class="fl">
+        <div class="links">
+          <a id="" rel="publications"  href="http://statisticaldiversitylab.com/publications">publications</a>
+          <a id="" rel="team"  href="http://statisticaldiversitylab.com/team">team</a>
+          <a id="" rel="software"  href="http://statisticaldiversitylab.com/manufacturers">software</a>
+          <a id="" rel="teaching"  href="http://statisticaldiversitylab.com/teaching">teaching</a>
+          <a id="" rel="blog"  href="http://statisticaldiversitylab.com/blog">blog</a>
+          <a id="" rel="overview"  href="http://statisticaldiversitylab.com/overview">research overview</a>
+          <div class="rule"></div>
+        </div>
+
+       
+        <div class="utes">
+          <a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+          <a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+          <img src="images/sites/sdi/footeremail.png" class="this">
+
+          
+          <a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+
+          <span class="loc"><span class="icon-location fl"></span>
+            	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151418_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151418", "label":"" ,  "tag":"div"}' >	
+		<p>Department of Biostatistics<br />
+F-657, Box 357232<br />
+Health Sciences Building, 1959 NE Pacific St<br />
+University of Washington, Seattle, WA 98195</p>
+		
+	</div>
+	
+
+
+
+
+
+
+          </span>
+          
+
+        </div>
+      </div>
+  </div>
+
+  <div id="footer">
+  <div class="page_frame tAc">
+    &copy; 2023 statistical diversity lab
+  </div>
+</div>
+</div>
+
+
+
+<div id="bottom_foot">
+   <div class="page_frame tAc"> 
+    <a id="bizango" href="https://www.bizango.com"  title="Website Design" target=_NEW>Website Design</a>
+  </div>
+</div>    
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#mobile_nav .nav").hide();
+	$("#mobile_nav").click(function() {
+		$("#mobile_nav .nav").toggle();
+	});
+	$("#nav_home").addClass("current")
+
+});
+</script>
+
+
+
+</body>
+</html>
