@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+<title>Resources and supporting information for &quot;Rarefaction, Alpha Diversity, and Statistics&quot; | Statistical Diversity Lab</title>
+<meta name="description" lang="en-us" content="" />
+<link rel="canon_test" href="236750.html">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+<script src="../javascripts/jquery-1.11.0.min.js%3F1391410894" type="text/javascript"></script> 
+<script src="../javascripts/jquery.simplemodal.1.4.4.min.js%3F1387826925" type="text/javascript"></script> 
+<script src="../javascripts/jquery-ui-1.10.3.custom.min.js%3F1388181381" type="text/javascript"></script> 
+
+
+<script type="text/javascript">
+  /*  patch added 9/18/2018 by scott
+   *  fix issue of link editing when ckeditor is opened in lightbox mode
+   *  https://bizango.teamwork.com/#/tasks/11559149
+   */
+  $.widget( "ui.dialog", $.ui.dialog, {
+   /*! jQuery UI - v1.10.2 - 2013-12-12
+    *  http://bugs.jqueryui.com/ticket/9087#comment:27 - bugfix
+    *  http://bugs.jqueryui.com/ticket/4727#comment:23 - bugfix
+    *  allowInteraction fix to accommodate windowed editors
+    */
+    _allowInteraction: function( event ) {
+      if ( this._super( event ) ) {
+        return true;
+      }
+
+      // address interaction issues with general iframes with the dialog
+      if ( event.target.ownerDocument != this.document[ 0 ] ) {
+        return true;
+      }
+
+      // address interaction issues with dialog window
+      if ( $( event.target ).closest( ".cke_dialog" ).length ) {
+        return true;
+      }
+
+      // address interaction issues with iframe based drop downs in IE
+      if ( $( event.target ).closest( ".cke" ).length ) {
+        return true;
+      }
+    },
+   /*! jQuery UI - v1.10.2 - 2013-10-28
+    *  http://dev.ckeditor.com/ticket/10269 - bugfix
+    *  moveToTop fix to accommodate windowed editors
+    */
+    _moveToTop: function ( event, silent ) {
+      if ( !event || !this.options.modal ) {
+        this._super( event, silent );
+      }
+    }
+  });
+</script>
+    
+
+    
+
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,600,700" rel="stylesheet">
+	<link href="../stylesheets/blocks/defaults.css%3F1694197450.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="../stylesheets/blog.css%3F1502990727.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/sdi/site.css%3F1539372687.css" media="screen" rel="stylesheet" type="text/css" />
+
+	</head>
+<body id="body_blog" class=" body_nothome ">
+
+	<div id="hero_frame" class="userBG tAr" >
+	<div class="page_frame group">
+		<a id="logo" href="../index.html"></a>
+		
+
+		<div id="utility_nav">
+			<img src="../images/sites/sdi/headeremail.png" class="this">
+			<a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+			<a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+			<a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+		</div>
+		<div id="nav_frame">
+					<div id="nav">
+			<ul class="nav">
+				<li><a id="nav_publications" rel="publications"  href="../publications.html">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="../team.html">team</a></li>
+				<li><a id="nav_software" rel="software"  href="../manufacturers.html">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="../teaching.html">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="../blog.html">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="../overview.html">research overview</a></li>
+			</ul>
+		</div>
+
+		<div id="mobile_nav">
+			<div class="icon">Menu &equiv;</div>
+			<ul class="nav">
+				<li><a id="nav_home" rel="home"  href="../index.html">home</a></li>
+				<li><a id="nav_publications" rel="publications"  href="../publications.html">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="../team.html">team</a></li>
+				<li><a id="nav_software" rel="software"  href="../manufacturers.html">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="../teaching.html">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="../blog.html">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="../overview.html">research overview</a></li>
+			</ul>
+		</div>
+	
+			<div class="rule"></div>
+		</div>
+	</div>
+</div>
+
+		<div class="titlebar">
+  <div class="page_frame">
+    <div class="fourteen-col center tAc">
+      	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151423_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151423", "label":"" ,  "tag":"div"}' >	
+		<h2>blog</h2>
+
+<p>statistical diversity lab</p>
+		
+	</div>
+	
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({ doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+
+<div id="page_body">
+
+
+    <!-- This view represents the complete blog post alone on a page. -->
+<div class="page_frame group">
+
+  <div class="blog_story twelve-col center">
+  
+	
+	<!-- no images displayed in "blankslate" layout, site owner handles them manually. -->
+    
+    <div class="blog_title">
+      <h1 class="bizango_cms bizango_cms_content bizango_content_title textdiv_title" id="content_236750_title" data-bizango='{"monkey":"data", "field":"title", "object_type":"content", "cms_id":"236750", "label":"", "tag":"h1"}' >Resources and supporting information for &quot;Rarefaction, Alpha Diversity, and Statistics&quot;</h1 >
+	
+
+
+
+
+
+
+    </div>
+  
+    <div class="blog_created_at">
+      <span>June 24, 2021</span>
+    </div>
+    
+    
+
+    <div class="blog_post_content group">
+		<div>
+      
+
+
+
+
+
+
+      </div>
+      
+      
+
+
+      
+  
+        <!-- PUBLIC VIEW -->
+          	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_236750_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"236750", "label":"" ,  "tag":"div"}' >	
+		<p><br />
+The purpose of this post is to answer some questions that I often receive by email about my paper &quot;<a href="https://www.frontiersin.org/articles/10.3389/fmicb.2019.02407/full">Rarefaction, Alpha Diversity, and Statistics</a>&quot; (Willis, 2019, Frontiers in Microbiology).&nbsp;If I have responded to you by email with this link, thanks for understanding that people from all over the world reach out to me on a daily basis with questions about microbiome data analysis, statistics, and diversity estimation -&nbsp;and I unfortunately can&#39;t respond to everyone individually. I will try to update this post periodically, though.&nbsp;</p>
+
+<h2>Where&#39;s the code to reproduce the figures and analyses?</h2>
+
+<p><a href="https://github.com/adw96/antirarefaction">https://github.com/adw96/antirarefaction</a></p>
+
+<p>Unfortunately I&#39;m not maintaining this repository,&nbsp;but it&#39;s there as a reference for you! As you will see below, I maintain other software that implements the tools that I used in the paper.&nbsp;</p>
+
+<h2>I want to estimate total diversity and its uncertainty. How?</h2>
+
+<p>There are lots of estimators out there, and many of them are very good! I wrote a R package that implements some of my favourites: the package is called <a href="https://github.com/adw96/breakaway">breakaway</a>. My personal favorite methods are <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.12332">breakaway::breakaway</a>, <a href="https://www.jstor.org/stable/3068576">breakaway::richness_chao_bunge</a>, and <a href="https://projecteuclid.org/journals/bayesian-analysis/volume-5/issue-4/Objective-Bayesian-estimation-for-the-number-of-species/10.1214/10-BA527.full">breakaway::objective_bayes_negbin</a>. Usually, when I need to estimate species richness, I use <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.12332">breakaway::breakaway</a>, but you should experiment and see which estimate is best adapted to your data structure. The vignettes in the breakaway package are a good resource for building this knowledge and intuition.</p>
+
+<p>The citation for the package breakaway is <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.12332">Willis &amp; Bunge, 2015, Biometrics, doi.org/10.1111/biom.12332.</a>&nbsp;Depending on what function(s) in the package you use, you may need to cite and credit other work as well.&nbsp;</p>
+
+<h2>I want to compare estimates of total diversity including their uncertainty. How?</h2>
+
+<p>There are actually relatively few ways of doing this. To fill this gap, I wrote a method called betta, which I implemented in the R package <a href="https://github.com/adw96/breakaway/">breakaway</a>. I recommend that you check out <a href="http://doi.org/10.1111/rssc.12206">breakaway::betta</a>. Again, the vignettes in the breakaway package are a good resource for building this knowledge and intuition.</p>
+
+<p>The citation for the function betta is <a href="http://doi.org/10.1111/rssc.12206">Willis, Bunge &amp; Whitman, 2017, JRSS-C,&nbsp;doi.org/10.1111/rssc.12206</a>.</p>
+
+<h2>Why didn&#39;t you put all of this in the paper?!</h2>
+
+<p>It was years ago and I can&#39;t remember why. Potential reasons include that I often err; that journals have space limits; and I didn&#39;t want to look like an egomaniac by constantly recommending my own tools (I don&#39;t always think they&#39;re the best, so I don&#39;t always recommend them!).</p>
+
+<h2>Why do you always tell me to use your software and methods? What sort of egomaniac are you?!</h2>
+
+<p>Fair point! But&nbsp;if I didn&#39;t think my tools were worth using, I wouldn&#39;t develop them. I won&#39;t be offended if you don&#39;t use them!&nbsp;</p>
+
+<h2>A reviewer/advisor/supervisor told me I have to rarefy! What do I do?</h2>
+
+<p>That&#39;s a really tough situation to be in! If you don&#39;t believe that you should be rarefying, you could consider sharing some of the resources linked above, or some lecture notes on the topic (such as <a href="https://github.com/statdivlab/stamps2019/blob/master/statistics/statistics-lecture-2019-no-jokes.pdf">here</a> and <a href="https://github.com/statdivlab/stamps2019/blob/master/estimation/estimation-lecture.pdf">here</a>), the <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003531">original critique of rarefying by statisticians</a>, or <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.12332">some of the alternatives</a>. I&#39;ve heard from many junior folx who have convinced senior or reviewing folx this way. However, the particulars of your situation will dictate if this is feasible.&nbsp;Good luck!</p>
+
+<h2>Will all future blogposts be written in this fake question-answer style?</h2>
+
+<p>In drafting this post, I was imagining that&nbsp;this was a fun conversation over coffee&nbsp;at a wonderful conference in a fabulous location, rather than me alone in my home office in a pandemic. So... probably!</p>
+
+<p><strong>Be safe and well!</strong></p>
+
+<p><strong>Dr. Amy D&nbsp;Willis, Ph.D.<br />
+24 June 2021</strong></p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+      
+      <div class="blog_assets">
+
+      
+      </div>
+
+
+    </div><!-- .blog_post_content -->	  
+
+        <div class="blog_footer group">
+  		
+        <!-- FOOTER CONTENT -->
+
+          <div class="widget_sharethis">
+  <span class='st_facebook_hcount' displayText='Facebook' st_url='http://statisticaldiversitylab.com/blog/236750' st_title="Resources and supporting information for &quot;Rarefaction, Alpha Diversity, and Statistics&quot;"></span>
+  <span style="margin-top:4px" class='st_twitter_hcount' displayText='Tweet' st_url='http://statisticaldiversitylab.com/blog/236750' st_title="Resources and supporting information for &quot;Rarefaction, Alpha Diversity, and Statistics&quot;" st_via=""></span>
+  <span style="margin-top:4px;"><span class='st_pinterest_hcount' displayText='Pinterest' st_url='http://statisticaldiversitylab.com/blog/236750' st_title="Resources and supporting information for &quot;Rarefaction, Alpha Diversity, and Statistics&quot;"></span></span>
+</div>
+          
+
+        </div><!-- .blog_footer -->
+      
+      <p class="backtotheblog"><a href="../blog.html">Back to blog</a></p>
+      
+  </div><!-- .blog_story -->
+</div><!-- .blog_content -->
+
+
+
+
+
+<div data-sortable="236750">
+
+
+</div>
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+
+	
+  <div id="topfoot" class="userBG" style="background-image:url('https://s3.amazonaws.com/hoth.bizango/images/362955/footerbg_feature.jpg')">
+    <img src="../images/sites/sdi/lucyintheskywith.png" class="dia">
+    <div class="page_frame group">
+      <a href="../index.html" class="footlog"><img src="../images/sites/sdi/logo.png"></a>
+      
+
+
+      <div class="fl">
+        <div class="links">
+          <a id="" rel="publications"  href="../publications.html">publications</a>
+          <a id="" rel="team"  href="../team.html">team</a>
+          <a id="" rel="software"  href="../manufacturers.html">software</a>
+          <a id="" rel="teaching"  href="../teaching.html">teaching</a>
+          <a id="" rel="blog"  href="../blog.html">blog</a>
+          <a id="" rel="overview"  href="../overview.html">research overview</a>
+          <div class="rule"></div>
+        </div>
+
+       
+        <div class="utes">
+          <a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+          <a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+          <img src="../images/sites/sdi/footeremail.png" class="this">
+
+          
+          <a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+
+          <span class="loc"><span class="icon-location fl"></span>
+            	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151418_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151418", "label":"" ,  "tag":"div"}' >	
+		<p>Department of Biostatistics<br />
+F-657, Box 357232<br />
+Health Sciences Building, 1959 NE Pacific St<br />
+University of Washington, Seattle, WA 98195</p>
+		
+	</div>
+	
+
+
+
+
+
+
+          </span>
+          
+
+        </div>
+      </div>
+  </div>
+
+  <div id="footer">
+  <div class="page_frame tAc">
+    &copy; 2023 statistical diversity lab
+  </div>
+</div>
+</div>
+
+
+
+<div id="bottom_foot">
+   <div class="page_frame tAc"> 
+    <a id="bizango" href="https://www.bizango.com"  title="Website Design" target=_NEW>Website Design</a>
+  </div>
+</div>    
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#mobile_nav .nav").hide();
+	$("#mobile_nav").click(function() {
+		$("#mobile_nav .nav").toggle();
+	});
+	$("#nav_blog").addClass("current")
+
+});
+</script>
+
+
+
+</body>
+</html>

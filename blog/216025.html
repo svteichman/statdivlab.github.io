@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+<title>A case for technical replicates in three parts | Statistical Diversity Lab</title>
+<meta name="description" lang="en-us" content="" />
+<link rel="canon_test" href="216025.html">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+<script src="../javascripts/jquery-1.11.0.min.js%3F1391410894" type="text/javascript"></script> 
+<script src="../javascripts/jquery.simplemodal.1.4.4.min.js%3F1387826925" type="text/javascript"></script> 
+<script src="../javascripts/jquery-ui-1.10.3.custom.min.js%3F1388181381" type="text/javascript"></script> 
+
+
+<script type="text/javascript">
+  /*  patch added 9/18/2018 by scott
+   *  fix issue of link editing when ckeditor is opened in lightbox mode
+   *  https://bizango.teamwork.com/#/tasks/11559149
+   */
+  $.widget( "ui.dialog", $.ui.dialog, {
+   /*! jQuery UI - v1.10.2 - 2013-12-12
+    *  http://bugs.jqueryui.com/ticket/9087#comment:27 - bugfix
+    *  http://bugs.jqueryui.com/ticket/4727#comment:23 - bugfix
+    *  allowInteraction fix to accommodate windowed editors
+    */
+    _allowInteraction: function( event ) {
+      if ( this._super( event ) ) {
+        return true;
+      }
+
+      // address interaction issues with general iframes with the dialog
+      if ( event.target.ownerDocument != this.document[ 0 ] ) {
+        return true;
+      }
+
+      // address interaction issues with dialog window
+      if ( $( event.target ).closest( ".cke_dialog" ).length ) {
+        return true;
+      }
+
+      // address interaction issues with iframe based drop downs in IE
+      if ( $( event.target ).closest( ".cke" ).length ) {
+        return true;
+      }
+    },
+   /*! jQuery UI - v1.10.2 - 2013-10-28
+    *  http://dev.ckeditor.com/ticket/10269 - bugfix
+    *  moveToTop fix to accommodate windowed editors
+    */
+    _moveToTop: function ( event, silent ) {
+      if ( !event || !this.options.modal ) {
+        this._super( event, silent );
+      }
+    }
+  });
+</script>
+    
+
+    
+
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,600,700" rel="stylesheet">
+	<link href="../stylesheets/blocks/defaults.css%3F1694197450.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="../stylesheets/blog.css%3F1502990727.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/sdi/site.css%3F1539372687.css" media="screen" rel="stylesheet" type="text/css" />
+
+	</head>
+<body id="body_blog" class=" body_nothome ">
+
+	<div id="hero_frame" class="userBG tAr" >
+	<div class="page_frame group">
+		<a id="logo" href="../index.html"></a>
+		
+
+		<div id="utility_nav">
+			<img src="../images/sites/sdi/headeremail.png" class="this">
+			<a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+			<a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+			<a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+		</div>
+		<div id="nav_frame">
+					<div id="nav">
+			<ul class="nav">
+				<li><a id="nav_publications" rel="publications"  href="../publications.html">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="../team.html">team</a></li>
+				<li><a id="nav_software" rel="software"  href="../manufacturers.html">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="../teaching.html">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="../blog.html">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="../overview.html">research overview</a></li>
+			</ul>
+		</div>
+
+		<div id="mobile_nav">
+			<div class="icon">Menu &equiv;</div>
+			<ul class="nav">
+				<li><a id="nav_home" rel="home"  href="../index.html">home</a></li>
+				<li><a id="nav_publications" rel="publications"  href="../publications.html">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="../team.html">team</a></li>
+				<li><a id="nav_software" rel="software"  href="../manufacturers.html">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="../teaching.html">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="../blog.html">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="../overview.html">research overview</a></li>
+			</ul>
+		</div>
+	
+			<div class="rule"></div>
+		</div>
+	</div>
+</div>
+
+		<div class="titlebar">
+  <div class="page_frame">
+    <div class="fourteen-col center tAc">
+      	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151423_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151423", "label":"" ,  "tag":"div"}' >	
+		<h2>blog</h2>
+
+<p>statistical diversity lab</p>
+		
+	</div>
+	
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({ doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+
+<div id="page_body">
+
+
+    <!-- This view represents the complete blog post alone on a page. -->
+<div class="page_frame group">
+
+  <div class="blog_story twelve-col center">
+  
+	
+	<!-- no images displayed in "blankslate" layout, site owner handles them manually. -->
+			<div class="blog_story_image " >
+		  
+				<!-- Show first image at the top if it's landscape -->
+					<img  class="bizango_illustration_landscape " src="https://s3.amazonaws.com/hoth.bizango/images/732350/image__4__feature.png" >
+			
+			</div>						
+    
+    <div class="blog_title">
+      <h1 class="bizango_cms bizango_cms_content bizango_content_title textdiv_title" id="content_216025_title" data-bizango='{"monkey":"data", "field":"title", "object_type":"content", "cms_id":"216025", "label":"", "tag":"h1"}' >A case for technical replicates in three parts</h1 >
+	
+
+
+
+
+
+
+    </div>
+  
+    <div class="blog_created_at">
+      <span>July 23, 2020</span>
+    </div>
+    
+    
+
+    <div class="blog_post_content group">
+		<div>
+      
+
+
+
+
+
+
+      </div>
+      
+      
+
+
+      
+  
+        <!-- PUBLIC VIEW -->
+          	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_216025_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"216025", "label":"" ,  "tag":"div"}' >	
+		<p><b data-stringify-type="bold"><i data-stringify-type="italic">This post is by David Clausen (</i></b><b data-stringify-type="bold"><i data-stringify-type="italic"><a aria-describedby="sk-tooltip-1218" data-sk="tooltip_parent" data-stringify-link="https://twitter.com/davidandacat" delay="150" href="https://twitter.com/davidandacat" rel="noopener noreferrer" target="_blank">@davidandacat</a></i></b><b data-stringify-type="bold"><i data-stringify-type="italic">). David is a PhD Candidate in Biostatistics at the University of Washington and a member of the StatDivLab. David enjoys technical replicates, sensibly-interpreted&nbsp;semiparametric models, and cats.</i></b></p>
+
+<p>This post will argue that including technical replicates - repeated measurements on identical samples - is worthwhile in NGS experiments, and it will guide you through one way to use them productively. In that endeavor, we will look at a human 16S dataset to get an overall sense of the scale of variability between replicates, and then we will explore how this variability may affect common analyses and what we can do about it. This is a fairly long post, so it will be posted in three parts: in the first part, we will examine measurement error in an important dataset; in the second, we will explore how this error may impact inferential analyses; and in the third, we will present a solution that partially (!) addresses measurement error in this context.</p>
+
+<h2>Part 1: A (Taxonomically) Broad View of Variability Across Technical Replicates</h2>
+
+<p>As with many measurements, the estimates of sample composition we obtain from 16S sequencing are less than perfectly precise. That is, repeatedly 16S sequencing on specimens from the same sample will typically give us different estimates of sample composition, even if we use the same sequencing and bioinformatics protocols. For an example of this, we can turn to data published by the <a href="https://doi.org/10.1038/nbt.3981">Microbiome Quality Control Consortium Project</a> (MBQC), which assessed technical variation in 16S sequencing data generated by many different sequencing laboratories and under many bioinformatics protocols. To start, let&#39;s consider technical replicates of a single sample (a stool sample from a healthy 36-year old man) produced by a single sequencing laboratory (wet laboratory B) and a single bioinformatics laboratory (dry laboratory 2). (For those of you familiar with the MBQC study design, we are only looking at specimens extracted and sequenced at the same laboratory - samples extracted at a central lab prior to shipment for sequencing are excluded here.) The plot below shows measured phylum-level compositions for each replicate.</p>
+
+<p><img alt="" src="https://s3.amazonaws.com/hoth.bizango/images/732357/fig1_feature.png" /></p>
+
+<p>To some extent, all of these replicates agree - most 16S reads are attributed to Firmicutes, unsurprisingly. However, we can also see that there is a fair amount of variation between replicates: for example, should we believe that the Firmicutes:Bacteroidetes ratio in this sample is in the neighborhood of 2 or 3 to 1, as replicate 2 might have us think, or is it greater than 10 to 1, as (just eyeballing it), replicate 1 suggests? In any case, we can at a minimum conclude that these replicate measurements cannot all reflect the actual composition of the sample with equal fidelity.</p>
+
+<p>In a moment, we&#39;ll look at genus-level data on the same replicates, but first, I&#39;d like to emphasize that because these data are repeat measurements on aliquots from the same sample, if we accept that the MBQC produced uniform aliquots (I do), then <strong>the variation we see here is primarily an artifact of sample preparation, sequencing, and bioinformatics</strong>. That is, in looking at 16S data, we observe the true sample composition plus some noise that I&#39;ll call measurement error. Since we&#39;re only looking at measurements on a single sample, all (or at least most) of the differences we see between replicates should be due to noise (i.e., measurement error). We can see see this variation because this laboratory sequenced technical replicates, but there is little reason to expect substantially lower noise when technical replicates are not included in a sequencing experiment - this only prevents us from observing variation due to noise.</p>
+
+<p>Now let&#39;s take a look at the same replicates at the genus level. To clean things up a bit, the plot below only shows genera that accounted for at least 0.1% of reads in some replicate and that were assigned to a known genus by bioinformatics (i.e., we&#39;ve thrown out unclassified reads for the time being).</p>
+
+<p><img alt="" src="https://s3.amazonaws.com/hoth.bizango/images/732358/fig2_feature.png" /></p>
+
+<p>Again, we observe substantial variability between replicates: in replicate 1, Prevotella (light peach labeled in white), accounts for less than 10% of reads, whereas in replicate 2 almost half of reads are attributed to Prevotella. This plot also highlights a difficulty of viewing relative abundance data as proportions: errors in a single taxon affect all other taxa because we divide by the sum of all reads in all taxa to obtain an estimated proportion. It&#39;s not clear from this plot, for example, whether the variability we see in Anaerostipes (dark purple labeled in white) is due to variability in detection of Anaerostipes or due to variability in detection of Prevotella. That is, perhaps the apparent differences in the proportion of reads attributed to Faecalibacterium across replicates are primarily the result of the large variation in Prevotella.</p>
+
+<p>This issue of propagation of error across taxa is in fact a fundamental part of this kind of data, and not just a peculiarity of this dataset. Since 16S sequencing provides information about relative, but not absolute, abundances, we cannot completely disentangle variation in one taxon from variation in another. That is, we have information about abundances in one taxon relative to abundances in others. This poses a somewhat tricky problem when our measurements contain error - how should we best view and analyze data when summary statistics for all taxa may be affected by measurement error in a single taxon? For instance, suppose that we knew that replicates 2, 3, and 4 above were contaminated with Prevotella from an outside source - what effect would this have on how we might compare those replicates with replicate 1? What genera are affected if we do not take this information into account?</p>
+
+<p>In the next part of this post, we will look at one way of simplifying the problem of analyzing relative abundance data and consider how measurement error may impact our analyses in this case.</p>
+
+<p><strong>References</strong></p>
+
+<ul>
+	<li>MBQC data: Rashmi Sinha et al., &#39;<a href="https://doi.org/10.1038/nbt.3981">Assessment of Variation in Microbial Community Amplicon Sequencing by the Microbiome Quality Control (MBQC) Project Consortium</a>,&#39; Nature Biotechnology 35, no. 11 (2017): pp. 1077-1086.&nbsp;</li>
+	<li>Code to reproduce our re-analysis of the MBQC data and the&nbsp;figures is available&nbsp;<a href="https://github.com/ailurophilia/technical_replicates">here</a></li>
+	<li>The &quot;repli-cats&quot; photo used under a CC BY-SA 2.0 license from <a href="https://www.flickr.com/photos/mathias-erhart/2562106102">Mathias Erhart</a></li>
+</ul>
+
+<h2>Appendix for the Doubtful</h2>
+
+<p>Should you perhaps be thinking that I have pulled the wool over your eyes by cherry-picking a &#39;bad&#39; sequencing laboratory, here is a multi-laboratory plot of read proportions by phylum for the specimen examined in this post:<img alt="" src="https://s3.amazonaws.com/hoth.bizango/images/732359/fig3_appendix1_feature.png" /></p>
+
+<p>By my reckoning, sequencing laboratory B is fairly middling insofar as within-laboratory phylum-level variability in this particular specimen is concerned. However, if you remain unconvinced, we will revisit issues arising from within- and between-laboratory variation in measurements (and beyond!) and continue to examine data across sequencing laboratories in the next two parts of this post. (So stay tuned.)</p>
+
+<h2>Yet Another Appendix</h2>
+
+<p>It occurs to me as well that you may be wondering why I didn&#39;t start with laboratory J, which seems to have quite low variation from replicate to replicate on the specimen we&#39;ve examined in this post. The short answer is that we will return to laboratory J (and the other laboratories) in subsequent posts. A slightly longer answer is that while low techical variation (i.e., low variability between replicate measurements on the same specimen) is a virtue, it is not the only virtue when it comes to measurement. We might, for example, want to know how close our measurements are to the truth (I certainly do). We can&#39;t directly ascertain that with the specimen we&#39;ve been looking at because we don&#39;t know its true composition, but the MBQC wisely also chose to include mock specimens of known composition. Here is a plot of measured phylum-level relative abundances (i.e., proportion of reads assigned to each detected phylum) in the fecal mock community, along with the true composition of the fecal mock (indicated by sequencing laboratory &#39;T&#39; at the right hand of the figure):<img alt="" src="https://s3.amazonaws.com/hoth.bizango/images/732360/fig4_appendix2_feature.png" /></p>
+
+<p>I will let you draw your own conclusions here, but I hope we can agree that the relationship between measure and true relative abundances is, while far from arbitrary, not particularly straightforward.</p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+      
+      <div class="blog_assets">
+
+      
+      </div>
+
+
+    </div><!-- .blog_post_content -->	  
+
+        <div class="blog_footer group">
+  		
+        <!-- FOOTER CONTENT -->
+
+          <div class="widget_sharethis">
+  <span class='st_facebook_hcount' displayText='Facebook' st_url='http://statisticaldiversitylab.com/blog/216025' st_title="A case for technical replicates in three parts"></span>
+  <span style="margin-top:4px" class='st_twitter_hcount' displayText='Tweet' st_url='http://statisticaldiversitylab.com/blog/216025' st_title="A case for technical replicates in three parts" st_via=""></span>
+  <span style="margin-top:4px;"><span class='st_pinterest_hcount' displayText='Pinterest' st_url='http://statisticaldiversitylab.com/blog/216025' st_title="A case for technical replicates in three parts"></span></span>
+</div>
+          
+
+        </div><!-- .blog_footer -->
+      
+      <p class="backtotheblog"><a href="../blog.html">Back to blog</a></p>
+      
+  </div><!-- .blog_story -->
+</div><!-- .blog_content -->
+
+
+
+
+
+<div data-sortable="216025">
+
+
+</div>
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+
+	
+  <div id="topfoot" class="userBG" style="background-image:url('https://s3.amazonaws.com/hoth.bizango/images/362955/footerbg_feature.jpg')">
+    <img src="../images/sites/sdi/lucyintheskywith.png" class="dia">
+    <div class="page_frame group">
+      <a href="../index.html" class="footlog"><img src="../images/sites/sdi/logo.png"></a>
+      
+
+
+      <div class="fl">
+        <div class="links">
+          <a id="" rel="publications"  href="../publications.html">publications</a>
+          <a id="" rel="team"  href="../team.html">team</a>
+          <a id="" rel="software"  href="../manufacturers.html">software</a>
+          <a id="" rel="teaching"  href="../teaching.html">teaching</a>
+          <a id="" rel="blog"  href="../blog.html">blog</a>
+          <a id="" rel="overview"  href="../overview.html">research overview</a>
+          <div class="rule"></div>
+        </div>
+
+       
+        <div class="utes">
+          <a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+          <a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+          <img src="../images/sites/sdi/footeremail.png" class="this">
+
+          
+          <a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+
+          <span class="loc"><span class="icon-location fl"></span>
+            	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151418_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151418", "label":"" ,  "tag":"div"}' >	
+		<p>Department of Biostatistics<br />
+F-657, Box 357232<br />
+Health Sciences Building, 1959 NE Pacific St<br />
+University of Washington, Seattle, WA 98195</p>
+		
+	</div>
+	
+
+
+
+
+
+
+          </span>
+          
+
+        </div>
+      </div>
+  </div>
+
+  <div id="footer">
+  <div class="page_frame tAc">
+    &copy; 2023 statistical diversity lab
+  </div>
+</div>
+</div>
+
+
+
+<div id="bottom_foot">
+   <div class="page_frame tAc"> 
+    <a id="bizango" href="https://www.bizango.com"  title="Website Design" target=_NEW>Website Design</a>
+  </div>
+</div>    
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#mobile_nav .nav").hide();
+	$("#mobile_nav").click(function() {
+		$("#mobile_nav .nav").toggle();
+	});
+	$("#nav_blog").addClass("current")
+
+});
+</script>
+
+
+
+</body>
+</html>

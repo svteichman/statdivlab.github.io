@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+<title>blog | Statistical Diversity Lab</title>
+<meta name="description" lang="en-us" content="" />
+<link rel="canon_test" href="blog.html">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+<script src="javascripts/jquery-1.11.0.min.js%3F1391410894" type="text/javascript"></script> 
+<script src="javascripts/jquery.simplemodal.1.4.4.min.js%3F1387826925" type="text/javascript"></script> 
+<script src="javascripts/jquery-ui-1.10.3.custom.min.js%3F1388181381" type="text/javascript"></script> 
+
+
+<script type="text/javascript">
+  /*  patch added 9/18/2018 by scott
+   *  fix issue of link editing when ckeditor is opened in lightbox mode
+   *  https://bizango.teamwork.com/#/tasks/11559149
+   */
+  $.widget( "ui.dialog", $.ui.dialog, {
+   /*! jQuery UI - v1.10.2 - 2013-12-12
+    *  http://bugs.jqueryui.com/ticket/9087#comment:27 - bugfix
+    *  http://bugs.jqueryui.com/ticket/4727#comment:23 - bugfix
+    *  allowInteraction fix to accommodate windowed editors
+    */
+    _allowInteraction: function( event ) {
+      if ( this._super( event ) ) {
+        return true;
+      }
+
+      // address interaction issues with general iframes with the dialog
+      if ( event.target.ownerDocument != this.document[ 0 ] ) {
+        return true;
+      }
+
+      // address interaction issues with dialog window
+      if ( $( event.target ).closest( ".cke_dialog" ).length ) {
+        return true;
+      }
+
+      // address interaction issues with iframe based drop downs in IE
+      if ( $( event.target ).closest( ".cke" ).length ) {
+        return true;
+      }
+    },
+   /*! jQuery UI - v1.10.2 - 2013-10-28
+    *  http://dev.ckeditor.com/ticket/10269 - bugfix
+    *  moveToTop fix to accommodate windowed editors
+    */
+    _moveToTop: function ( event, silent ) {
+      if ( !event || !this.options.modal ) {
+        this._super( event, silent );
+      }
+    }
+  });
+</script>
+    
+
+    
+
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,600,700" rel="stylesheet">
+	<link href="stylesheets/blocks/defaults.css%3F1694197450.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="stylesheets/blog.css%3F1502990727.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/sdi/site.css%3F1539372687.css" media="screen" rel="stylesheet" type="text/css" />
+
+	</head>
+<body id="body_blog" class=" body_nothome ">
+
+	<div id="hero_frame" class="userBG tAr" >
+	<div class="page_frame group">
+		<a id="logo" href="index.html"></a>
+		
+
+		<div id="utility_nav">
+			<img src="images/sites/sdi/headeremail.png" class="this">
+			<a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+			<a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+			<a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+		</div>
+		<div id="nav_frame">
+					<div id="nav">
+			<ul class="nav">
+				<li><a id="nav_publications" rel="publications"  href="publications.html">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="team.html">team</a></li>
+				<li><a id="nav_software" rel="software"  href="manufacturers.html">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="teaching.html">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="blog.html">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="overview.html">research overview</a></li>
+			</ul>
+		</div>
+
+		<div id="mobile_nav">
+			<div class="icon">Menu &equiv;</div>
+			<ul class="nav">
+				<li><a id="nav_home" rel="home"  href="index.html">home</a></li>
+				<li><a id="nav_publications" rel="publications"  href="publications.html">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="team.html">team</a></li>
+				<li><a id="nav_software" rel="software"  href="manufacturers.html">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="teaching.html">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="blog.html">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="overview.html">research overview</a></li>
+			</ul>
+		</div>
+	
+			<div class="rule"></div>
+		</div>
+	</div>
+</div>
+
+		<div class="titlebar">
+  <div class="page_frame">
+    <div class="fourteen-col center tAc">
+      	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151423_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151423", "label":"" ,  "tag":"div"}' >	
+		<h2>blog</h2>
+
+<p>statistical diversity lab</p>
+		
+	</div>
+	
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({ doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+
+<div id="page_body">
+
+  
+    <div class="page_frame group">
+      <div class="twelve-col center">
+        
+
+
+<div class="blog_content group archive-basic archive-basic sidebar-false">
+  
+  
+    
+  <!-- ENTIRE LIST  -->
+      
+		<!-- This view represents the blog post fragment included on the list view -->
+
+
+<div class="blog_story_in_list"> <!-- LIST STORY ITEM  -->
+
+	
+		<!-- PUBLISHED VIEW FOR PUBLIC -->
+		
+		
+		
+        		  <div class="blog_main_column group">				
+
+        <div class="blog_created_at">
+          	<div class="bizango_cms bizango_cms_content bizango_content_date bizango_content_created_at textdiv_created_at" id="content_236750_created_at" data-bizango='{"monkey":"data", "field":"created_at", "object_type":"content", "cms_id":"236750", "label":"", "tag":"div"}' >	
+		<span>Jun 24, 2021</span>
+		
+	</div  >
+
+
+
+
+
+
+
+        </div>
+                      
+        <div class="blog_title">
+          <h1><a href="blog/236750.html">Resources and supporting information for &quot;Rarefaction, Alpha Diversity, and Statistics&quot;</a></h1>
+        </div>
+      
+      
+        <div class="blog_post_teaser">
+          	<div class="bizango_cms bizango_cms_content bizango_content_teaser textdiv_teaser" id="content_236750_teaser" data-bizango='{"monkey":"data", "field":"teaser", "object_type":"content", "cms_id":"236750", "label":"" ,  "tag":"div"}' >	
+		<p>Answering some questions that I often receive by email about my paper &quot;Rarefaction, Alpha Diversity, and Statistics&quot;.&nbsp;</p>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+
+          <p class="read_more_link"><a href="blog/236750.html" class="icon-angle-circled-right"></a> <a href="blog/236750.html">Read More</a></p>
+
+
+
+
+
+        
+        
+        
+        
+		</div><!-- .blog_main_column -->
+
+		
+		
+		
+
+</div><!-- .blog_story .in_list -->
+
+
+      
+		<!-- This view represents the blog post fragment included on the list view -->
+
+
+<div class="blog_story_in_list"> <!-- LIST STORY ITEM  -->
+
+	
+		<!-- PUBLISHED VIEW FOR PUBLIC -->
+		
+		
+		
+        		  <div class="blog_main_column group">				
+
+        <div class="blog_created_at">
+          	<div class="bizango_cms bizango_cms_content bizango_content_date bizango_content_created_at textdiv_created_at" id="content_216025_created_at" data-bizango='{"monkey":"data", "field":"created_at", "object_type":"content", "cms_id":"216025", "label":"", "tag":"div"}' >	
+		<span>Jul 23, 2020</span>
+		
+	</div  >
+
+
+
+
+
+
+
+        </div>
+                      
+        <div class="blog_title">
+          <h1><a href="blog/216025.html">A case for technical replicates in three parts</a></h1>
+        </div>
+      
+			<div class="blog_teaser_image  blog_teaser_image_landscape ">
+				<img  class="illustration " src="https://s3.amazonaws.com/hoth.bizango/images/732350/image__4__feature.png"  >
+			</div>						
+      
+        <div class="blog_post_teaser">
+          	<div class="bizango_cms bizango_cms_content bizango_content_teaser textdiv_teaser" id="content_216025_teaser" data-bizango='{"monkey":"data", "field":"teaser", "object_type":"content", "cms_id":"216025", "label":"" ,  "tag":"div"}' >	
+		<p>This post will argue that including technical replicates &ndash; repeated measurements on identical samples &ndash; is worthwhile in NGS experiments, and it will guide you through one way to use them productively. In that endeavor, we will look at a human 16S dataset to get an overall sense of the scale of variability between replicates, and then we will explore how this variability may affect common analyses and what we can do about it. This is a fairly long post, so it will be posted in three parts: in the first part, we will examine measurement error in an important dataset; in the second, we will explore how this error may impact inferential analyses; and in the third, we will present a solution that partially(!) addresses measurement error in this context.</p>
+
+<p>by David Clausen</p>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+
+          <p class="read_more_link"><a href="blog/216025.html" class="icon-angle-circled-right"></a> <a href="blog/216025.html">Read More</a></p>
+
+
+
+
+
+        
+        
+        
+        
+		</div><!-- .blog_main_column -->
+
+		
+		
+		
+
+</div><!-- .blog_story .in_list -->
+
+
+      
+		<!-- This view represents the blog post fragment included on the list view -->
+
+
+<div class="blog_story_in_list"> <!-- LIST STORY ITEM  -->
+
+	
+		<!-- PUBLISHED VIEW FOR PUBLIC -->
+		
+		
+		
+        		  <div class="blog_main_column group">				
+
+        <div class="blog_created_at">
+          	<div class="bizango_cms bizango_cms_content bizango_content_date bizango_content_created_at textdiv_created_at" id="content_167093_created_at" data-bizango='{"monkey":"data", "field":"created_at", "object_type":"content", "cms_id":"167093", "label":"", "tag":"div"}' >	
+		<span>Dec 16, 2019</span>
+		
+	</div  >
+
+
+
+
+
+
+
+        </div>
+                      
+        <div class="blog_title">
+          <h1><a href="blog/167093.html">Microbiome data analysis 101</a></h1>
+        </div>
+      
+      
+        <div class="blog_post_teaser">
+          	<div class="bizango_cms bizango_cms_content bizango_content_teaser textdiv_teaser" id="content_167093_teaser" data-bizango='{"monkey":"data", "field":"teaser", "object_type":"content", "cms_id":"167093", "label":"" ,  "tag":"div"}' >	
+		<p>I was grateful to be invited to Braunschweig as a keynote speaker at the Thunen Symposium on Soil Metagenomics this week. It was a real privilege to have this opportunity to get more up-to-date with many frontiers in soil science and to be brought into the discussion on analysis.</p>
+
+<p>Nevertheless, I heard a lot of frustration from (often junior, often from non-EU or -US institutions) folks with trying to navigate which of the myriad tools to use for analysing sequencing data. I can talk for hours and write hundreds of pages about what I think are the best tools for relative abundance, diversity, network estimation &amp; pangenomic analysis, but I think basic principles are more important. This post is intended to lay out some of these principles...</p>
+		
+	</div>
+	
+
+
+
+
+
+
+        </div>
+
+          <p class="read_more_link"><a href="blog/167093.html" class="icon-angle-circled-right"></a> <a href="blog/167093.html">Read More</a></p>
+
+
+
+
+
+        
+        
+        
+        
+		</div><!-- .blog_main_column -->
+
+		
+		
+		
+
+</div><!-- .blog_story .in_list -->
+
+
+
+  <div class="blog_pagination">
+    
+    
+    <div class="clear"></div>
+  </div>
+			
+</div><!-- .blog_content -->
+
+
+      </div>
+    </div>
+
+  
+</div>
+
+
+
+
+
+	
+  <div id="topfoot" class="userBG" style="background-image:url('https://s3.amazonaws.com/hoth.bizango/images/362955/footerbg_feature.jpg')">
+    <img src="images/sites/sdi/lucyintheskywith.png" class="dia">
+    <div class="page_frame group">
+      <a href="index.html" class="footlog"><img src="images/sites/sdi/logo.png"></a>
+      
+
+
+      <div class="fl">
+        <div class="links">
+          <a id="" rel="publications"  href="publications.html">publications</a>
+          <a id="" rel="team"  href="team.html">team</a>
+          <a id="" rel="software"  href="manufacturers.html">software</a>
+          <a id="" rel="teaching"  href="teaching.html">teaching</a>
+          <a id="" rel="blog"  href="blog.html">blog</a>
+          <a id="" rel="overview"  href="overview.html">research overview</a>
+          <div class="rule"></div>
+        </div>
+
+       
+        <div class="utes">
+          <a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+          <a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+          <img src="images/sites/sdi/footeremail.png" class="this">
+
+          
+          <a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+
+          <span class="loc"><span class="icon-location fl"></span>
+            	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151418_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151418", "label":"" ,  "tag":"div"}' >	
+		<p>Department of Biostatistics<br />
+F-657, Box 357232<br />
+Health Sciences Building, 1959 NE Pacific St<br />
+University of Washington, Seattle, WA 98195</p>
+		
+	</div>
+	
+
+
+
+
+
+
+          </span>
+          
+
+        </div>
+      </div>
+  </div>
+
+  <div id="footer">
+  <div class="page_frame tAc">
+    &copy; 2023 statistical diversity lab
+  </div>
+</div>
+</div>
+
+
+
+<div id="bottom_foot">
+   <div class="page_frame tAc"> 
+    <a id="bizango" href="https://www.bizango.com"  title="Website Design" target=_NEW>Website Design</a>
+  </div>
+</div>    
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#mobile_nav .nav").hide();
+	$("#mobile_nav").click(function() {
+		$("#mobile_nav .nav").toggle();
+	});
+	$("#nav_blog").addClass("current")
+
+});
+</script>
+
+
+
+</body>
+</html>

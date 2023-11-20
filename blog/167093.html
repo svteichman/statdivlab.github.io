@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+<title>Microbiome data analysis 101 | Statistical Diversity Lab</title>
+<meta name="description" lang="en-us" content="" />
+<link rel="canon_test" href="167093.html">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+<script src="../javascripts/jquery-1.11.0.min.js%3F1391410894" type="text/javascript"></script> 
+<script src="../javascripts/jquery.simplemodal.1.4.4.min.js%3F1387826925" type="text/javascript"></script> 
+<script src="../javascripts/jquery-ui-1.10.3.custom.min.js%3F1388181381" type="text/javascript"></script> 
+
+
+<script type="text/javascript">
+  /*  patch added 9/18/2018 by scott
+   *  fix issue of link editing when ckeditor is opened in lightbox mode
+   *  https://bizango.teamwork.com/#/tasks/11559149
+   */
+  $.widget( "ui.dialog", $.ui.dialog, {
+   /*! jQuery UI - v1.10.2 - 2013-12-12
+    *  http://bugs.jqueryui.com/ticket/9087#comment:27 - bugfix
+    *  http://bugs.jqueryui.com/ticket/4727#comment:23 - bugfix
+    *  allowInteraction fix to accommodate windowed editors
+    */
+    _allowInteraction: function( event ) {
+      if ( this._super( event ) ) {
+        return true;
+      }
+
+      // address interaction issues with general iframes with the dialog
+      if ( event.target.ownerDocument != this.document[ 0 ] ) {
+        return true;
+      }
+
+      // address interaction issues with dialog window
+      if ( $( event.target ).closest( ".cke_dialog" ).length ) {
+        return true;
+      }
+
+      // address interaction issues with iframe based drop downs in IE
+      if ( $( event.target ).closest( ".cke" ).length ) {
+        return true;
+      }
+    },
+   /*! jQuery UI - v1.10.2 - 2013-10-28
+    *  http://dev.ckeditor.com/ticket/10269 - bugfix
+    *  moveToTop fix to accommodate windowed editors
+    */
+    _moveToTop: function ( event, silent ) {
+      if ( !event || !this.options.modal ) {
+        this._super( event, silent );
+      }
+    }
+  });
+</script>
+    
+
+    
+
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,600,700" rel="stylesheet">
+	<link href="../stylesheets/blocks/defaults.css%3F1694197450.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="../stylesheets/blog.css%3F1502990727.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../stylesheets/sdi/site.css%3F1539372687.css" media="screen" rel="stylesheet" type="text/css" />
+
+	</head>
+<body id="body_blog" class=" body_nothome ">
+
+	<div id="hero_frame" class="userBG tAr" >
+	<div class="page_frame group">
+		<a id="logo" href="../index.html"></a>
+		
+
+		<div id="utility_nav">
+			<img src="../images/sites/sdi/headeremail.png" class="this">
+			<a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+			<a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+			<a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+		</div>
+		<div id="nav_frame">
+					<div id="nav">
+			<ul class="nav">
+				<li><a id="nav_publications" rel="publications"  href="../publications.html">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="../team.html">team</a></li>
+				<li><a id="nav_software" rel="software"  href="../manufacturers.html">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="../teaching.html">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="../blog.html">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="../overview.html">research overview</a></li>
+			</ul>
+		</div>
+
+		<div id="mobile_nav">
+			<div class="icon">Menu &equiv;</div>
+			<ul class="nav">
+				<li><a id="nav_home" rel="home"  href="../index.html">home</a></li>
+				<li><a id="nav_publications" rel="publications"  href="../publications.html">publications</a></li>
+				<li><a id="nav_team" rel="team"  href="../team.html">team</a></li>
+				<li><a id="nav_software" rel="software"  href="../manufacturers.html">software</a></li>
+				<li><a id="nav_teaching" rel="teaching"  href="../teaching.html">teaching</a></li>
+				<li><a id="nav_blog" rel="blog"  href="../blog.html">blog</a></li>
+				<li><a id="nav_overview" rel="overview"  href="../overview.html">research overview</a></li>
+			</ul>
+		</div>
+	
+			<div class="rule"></div>
+		</div>
+	</div>
+</div>
+
+		<div class="titlebar">
+  <div class="page_frame">
+    <div class="fourteen-col center tAc">
+      	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151423_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151423", "label":"" ,  "tag":"div"}' >	
+		<h2>blog</h2>
+
+<p>statistical diversity lab</p>
+		
+	</div>
+	
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({ doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+
+<div id="page_body">
+
+
+    <!-- This view represents the complete blog post alone on a page. -->
+<div class="page_frame group">
+
+  <div class="blog_story twelve-col center">
+  
+	
+	<!-- no images displayed in "blankslate" layout, site owner handles them manually. -->
+    
+    <div class="blog_title">
+      <h1 class="bizango_cms bizango_cms_content bizango_content_title textdiv_title" id="content_167093_title" data-bizango='{"monkey":"data", "field":"title", "object_type":"content", "cms_id":"167093", "label":"", "tag":"h1"}' >Microbiome data analysis 101</h1 >
+	
+
+
+
+
+
+
+    </div>
+  
+    <div class="blog_created_at">
+      <span>December 16, 2019</span>
+    </div>
+    
+    
+
+    <div class="blog_post_content group">
+		<div>
+      
+
+
+
+
+
+
+      </div>
+      
+      
+
+
+      
+  
+        <!-- PUBLIC VIEW -->
+          	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_167093_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"167093", "label":"" ,  "tag":"div"}' >	
+		<h1>Some reflections on Thunen Symposium on Soil Metagenomics</h1>
+
+<p>I was grateful to be invited to Braunschweig as a keynote speaker at the Thunen Symposium on Soil Metagenomics this week. It was a real privilege to have this opportunity to get more up-to-date with many frontiers in soil science and to be brought into the discussion on analysis.</p>
+
+<p>Nevertheless, I heard a lot of frustration from (often junior, often from non-EU or -US institutions) folks with trying to navigate which of the myriad tools to use for analysing sequencing data. I can talk for hours and write hundreds of pages about what I think are the best tools for relative abundance, diversity, network estimation &amp; pangenomic analysis, but I think basic principles are more important. This post is intended to lay out some of these principles -- I hope it&#39;s helpful. Some related slides are <a href="http://github.com/adw96/presentations">here</a>, and they contain more links.</p>
+
+<p>Disclaimer: This post contains opinions. These opinions are mine, and mine alone; feel free to disagree.</p>
+
+<h1>Interpret your data in context</h1>
+
+<p>At this conference I gave a talk on <a href="https://elifesciences.org/articles/46923">this</a>&nbsp;paper, where <a href="https://twitter.com/mikemc423">Michael&nbsp;McLaren</a>, <a href="https://callahanlab.cvm.ncsu.edu/">Benjamin Callahan</a> &amp; I showed that sequencing microbial communities does not give you an accurate picture of microbial community composition (even for the simplest communities). Does that mean that we shouldn&#39;t sequence microbial communities? Of course not! Sequencing gives us amazingly rich information about microbial communities. However, sequencing abundance profiles can be misleading for the microbial community abundance profiles. I encourage you to talk about relative abundance of reads, but not relative abundance of microbes in communities. We can bake some of this into our science communication: instead of &quot;the response of soil microbiomes to X&quot;, consider talking about &quot;changes in microbial sequencing profiles of soil with X&quot;. This isn&#39;t a perfect fix, but it&#39;s a start.</p>
+
+<p>I&#39;m also a little tired of hearing supercilious comments about different sequencing technologies. Reality check: 16S sequencing sequences 16S sequence variants. Shotgun sequences short reads -- sometimes you can reconstruct partial genomes (MAGs), sometimes you can reconstruct genes. Long read sequencing sequences longer reads -- potentially telling you about repeating/hypervariable regions. I think <a href="http://astrobiomike.github.io">Mike Lee</a>&nbsp;does a great job of emphasising that *different* technologies give you *different* pictures of the community (check out his blog &amp; resources!). One is not better than the other for answering an arbitrary question. Let&#39;s consider the question when deciding on technology.</p>
+
+<h1>Be a decent person</h1>
+
+<p>I also find it classist when folks who have access to shotgun sequencing make fun of folks who only have access to 16S sequencing. Shotgun sequencing is more expensive, and so more available to folks from wealthier institutions and better funded labs. Therefore, please avoid snide comments about 16S&nbsp;-- even if 16S sequence variants don&#39;t help you answer *your* question.</p>
+
+<h1>Show me your data</h1>
+
+<p>There are two plots that are very popular in microbiome science that I wish were relegated to supplementary materials or omitted: ordination plots, and bar plots. My objection is common to both: they obscure your data.</p>
+
+<h2>Ordination plots</h2>
+
+<p>If you don&#39;t know what these are -- great! A reminder for those who do -- this plots a low-dimensional projection (or transformation) that maximises the variability/separation between samples.</p>
+
+<p><a href="../team.html">David Clausen</a>&nbsp;plans to go into some problems with ordination in a future post, so I&#39;ll instead suggest a better way to show me what you observed: Identify what aspect of the community is changing, and show me how it&#39;s changing. If you care about relative abundance of reads mapping to a sequence variant, gene, or genome, show me how read relative abundance changes... and show me those error bars. For example, here&#39;s how the relative abundance of reads with Massilia 16S sequence variants changes with forest fires (Data from <a href="https://www.sciencedirect.com/science/article/pii/S0038071719302354?via%3Dihub">Whitman et al 2019</a>):</p>
+
+<p><img alt="" height="296" src="https://s3.amazonaws.com/hoth.bizango/images/648561/Screen_Shot_2019-12-13_at_3.39.56_PM_feature.png" width="764" /></p>
+
+<p>I could make this plot better in many ways, but here&#39;s what I like: you can see what&#39;s on the x-axis (samples), y-axis (16S read relative abundance) and color (burned/unburned). You can see the error bars implied by my fitted model (<a href="https://github.com/bryandmartin/corncob">corncob</a>); they seem reasonable to me. You can see what feature changes, and by how much. I could tile 4 of these in the same area as an ordination plot... and the ordination&nbsp;tells me nothing about what *specific* feature of the community is changing.</p>
+
+<p>I know reviewers and advisors often ask for these plots, so if you have to provide them, put them in Supplementary Material, spend &lt;1 minute talking about them in talks, and don&#39;t do a hypothesis test to see if the picture is &quot;significant&quot;... more details on this in a future blog post from <a href="http://twitter.com/davidandacat">David</a>! &nbsp;</p>
+
+<h2>Bar plots</h2>
+
+<p>Do you have multiple measurements of something that&#39;s always positive? Biomass weight/density? &nbsp;CO2 flux? DNA concentration? Great! I want to see it.</p>
+
+<p>Here&#39;s the same data shown two ways -- thanks to&nbsp;<a href="https://rafalab.github.io/">Rafael Irizarry</a> and <a href="https://mikelove.github.io/">Michael Love</a> for their <a href="https://genomicsclass.github.io/book/pages/plots_to_avoid.html">excellent book chapter&nbsp;on this</a>:</p>
+
+<p><img alt="" height="272" src="https://s3.amazonaws.com/hoth.bizango/images/648554/fig1c_feature.png" width="400" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="280" src="https://s3.amazonaws.com/hoth.bizango/images/648547/plots_to_avoid-unnamed-chunk-5-1_feature.png" width="280" /></p>
+
+<p>The left plot obscures you data, while the right plot shows your audience how much deviation&nbsp;there is around the mean. If there&nbsp;are&nbsp;outliers, which there often are, you can hide them in a barplot but not in a scatterplot. (That&#39;s what&#39;s really&nbsp;scary to me when I see a barplot.)&nbsp;&nbsp;</p>
+
+<p>Bottom line: If you use data to make a conclusion, please show me that data.</p>
+
+<p>Choose a scatterplot/jitterplot over a bar plot, and ask your colleagues to do the same.&nbsp;</p>
+
+<h1>Statisticians are not the enemy, nor the gatekeeper</h1>
+
+<p>I can&#39;t speak for all statisticians, but my personal mission as a statistician is to facilitate <em>science</em> via the <em>scientific method</em>. I advocate for reproducible and replicable science, and evidence-based decision making. I try to organise everything I do around this goal.</p>
+
+<p>My impression is that folks equate statisticans to Reviewer #2 -- someone who doesn&#39;t like your work and doesn&#39;t want it published. If a paper&#39;s data supports the conclusions that were drawn, and that conclusion is important or interesting, then I usually support publication. However, if the conclusions are overstated, if the data doesn&#39;t support the conclusion, or if the authors don&#39;t show me how the data supports the conclusions, then anyone (statistician or not) has the right to object. (That said, I probably wasn&#39;t your reviewer.)</p>
+
+<p>I think it&#39;s actually more common for non-statisticians to complain about your statistical methods, because (1) there are many more non-statisticians than statisticians, and (2) statistical methods are often an easier&nbsp;target for criticism because&nbsp;knowledge of context isn&#39;t necessary to criticise methods. I encourage editors to ask reviewers &quot;Does the authors&#39; data support their conclusions?&quot; rather than &quot;Did they use the best methods to analyse their data?&quot; Assessing what is the best analysis method is usually impossible and definitely unreasonable/unscalable (because it requires someone to reanalyse all the data).</p>
+
+<p>Let&#39;s not let perfection prevent progress.</p>
+
+<h1>More coming soon...</h1>
+
+<p>I have lots of opinions about analysing microbiome data, and many of them are in my <a href="https://github.com/statdivlab/stamps2019/">lecture notes for STAMPS 2019</a>&nbsp;and <a href="https://github.com/adw96/presentations">this folder of talks that I&#39;ve given</a>. However, that may not be the most digestible format,&nbsp;so I&#39;ll try to slowly communicate them through this blog. In the meantime, good luck with your reasonable, ethical &amp; rigourous microbiome science... and happy holidays!</p>
+
+<p>Amy Willis, 13 December 2019<br />
+&nbsp;</p>
+
+<p>(with thanks to <a href="https://twitter.com/Jake_in_the_Lab">Jacob Price</a>, <a href="https://twitter.com/BryanDMartin_">Bryan Martin</a>, <a href="https://twitter.com/paulinetrinh">Pauline Trinh</a> &amp; <a href="https://twitter.com/davidandacat">David Clausen</a> for their helpful suggestions &amp; edits)</p>
+		
+	</div>
+	
+
+
+
+
+
+
+
+      
+      <div class="blog_assets">
+
+      
+      </div>
+
+
+    </div><!-- .blog_post_content -->	  
+
+        <div class="blog_footer group">
+  		
+        <!-- FOOTER CONTENT -->
+
+          <div class="widget_sharethis">
+  <span class='st_facebook_hcount' displayText='Facebook' st_url='http://statisticaldiversitylab.com/blog/167093' st_title="Microbiome data analysis 101"></span>
+  <span style="margin-top:4px" class='st_twitter_hcount' displayText='Tweet' st_url='http://statisticaldiversitylab.com/blog/167093' st_title="Microbiome data analysis 101" st_via=""></span>
+  <span style="margin-top:4px;"><span class='st_pinterest_hcount' displayText='Pinterest' st_url='http://statisticaldiversitylab.com/blog/167093' st_title="Microbiome data analysis 101"></span></span>
+</div>
+          
+
+        </div><!-- .blog_footer -->
+      
+      <p class="backtotheblog"><a href="../blog.html">Back to blog</a></p>
+      
+  </div><!-- .blog_story -->
+</div><!-- .blog_content -->
+
+
+
+
+
+<div data-sortable="167093">
+
+
+</div>
+
+
+
+
+
+  
+  
+</div>
+
+
+
+
+
+	
+  <div id="topfoot" class="userBG" style="background-image:url('https://s3.amazonaws.com/hoth.bizango/images/362955/footerbg_feature.jpg')">
+    <img src="../images/sites/sdi/lucyintheskywith.png" class="dia">
+    <div class="page_frame group">
+      <a href="../index.html" class="footlog"><img src="../images/sites/sdi/logo.png"></a>
+      
+
+
+      <div class="fl">
+        <div class="links">
+          <a id="" rel="publications"  href="../publications.html">publications</a>
+          <a id="" rel="team"  href="../team.html">team</a>
+          <a id="" rel="software"  href="../manufacturers.html">software</a>
+          <a id="" rel="teaching"  href="../teaching.html">teaching</a>
+          <a id="" rel="blog"  href="../blog.html">blog</a>
+          <a id="" rel="overview"  href="../overview.html">research overview</a>
+          <div class="rule"></div>
+        </div>
+
+       
+        <div class="utes">
+          <a href="https://twitter.com/AmyDWillis" target="_BLANK" class="twitt"><span class="icon-twitter"></span></a>
+          <a href="https://github.com/adw96" target="_BLANK" class="git"><span class="icon-github"></span></a>
+          <img src="../images/sites/sdi/footeremail.png" class="this">
+
+          
+          <a href="tel:206.543.8027"><span class="icon-phone"></span>206.543.8027</a>
+
+          <span class="loc"><span class="icon-location fl"></span>
+            	<div class="bizango_cms bizango_cms_content bizango_content_prose textdiv_prose" id="content_151418_prose" data-bizango='{"monkey":"data", "field":"prose", "object_type":"content", "cms_id":"151418", "label":"" ,  "tag":"div"}' >	
+		<p>Department of Biostatistics<br />
+F-657, Box 357232<br />
+Health Sciences Building, 1959 NE Pacific St<br />
+University of Washington, Seattle, WA 98195</p>
+		
+	</div>
+	
+
+
+
+
+
+
+          </span>
+          
+
+        </div>
+      </div>
+  </div>
+
+  <div id="footer">
+  <div class="page_frame tAc">
+    &copy; 2023 statistical diversity lab
+  </div>
+</div>
+</div>
+
+
+
+<div id="bottom_foot">
+   <div class="page_frame tAc"> 
+    <a id="bizango" href="https://www.bizango.com"  title="Website Design" target=_NEW>Website Design</a>
+  </div>
+</div>    
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#mobile_nav .nav").hide();
+	$("#mobile_nav").click(function() {
+		$("#mobile_nav .nav").toggle();
+	});
+	$("#nav_blog").addClass("current")
+
+});
+</script>
+
+
+
+</body>
+</html>
